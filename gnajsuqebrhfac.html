@@ -47,8 +47,11 @@
         const submitPasswordButton = document.getElementById('submitPassword');
         const messageElement = document.getElementById('message');
 
+        // Nova senha: ascensão obstruída
         const correctPassword = [
-            '\u0052', '\u0069', '\u0074', '\u0075', '\u0061', '\u006C'
+            '\u0061', '\u0073', '\u0063', '\u0065', '\u006E', '\u0073', '\u00E3', '\u006F', 
+            '\u0020', '\u006F', '\u0062', '\u0073', '\u0074', '\u0072', '\u0075', '\u00ED', 
+            '\u0064', '\u0061'
         ];
 
         const hiddenMessage = [
@@ -63,6 +66,7 @@
             '\u006D', '\u006C'
         ];
 
+        // Exibir a mensagem oculta
         messageElement.textContent = hiddenMessage.join('');
 
         submitPasswordButton.addEventListener('click', () => {
