@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Significativa</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        #imageContainer {
+            margin-top: 30px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border: 2px solid red;
+        }
+        #passwordContainer {
+            margin-top: 30px;
+        }
+        #passwordInput {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #submitPassword {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Uma imagem vale mais que mil palavras</div>
+    <div id="imageContainer">
+        <img src="DuskDawn.jpg" alt="Imagem significativa">
+    </div>
+    
+    <div id="passwordContainer">
+        <input type="password" id="passwordInput" placeholder="Digite a senha">
+        <button id="submitPassword">Enviar</button>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const submitPasswordButton = document.getElementById('submitPassword');
+
+        const correctPassword = [
+            '\u0044', '\u0061', '\u0077', '\u006E'
+        ];
+
+        submitPasswordButton.addEventListener('click', () => {
+            const password = passwordInput.value;
+            const decodedPassword = correctPassword.join('');
+            if (password === decodedPassword) {
+                window.location.href = "gnajsuqebrhfac.html";
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        });
+    </script>
+</body>
+</html>

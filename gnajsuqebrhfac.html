@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Oculta</title>
+    <style>
+        body {
+            background-color: black;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 48px;
+            position: absolute; 
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%); 
+        }
+        #passwordContainer {
+            margin-top: 30px;
+        }
+        #passwordInput {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #submitPassword {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordContainer">
+        <input type="password" id="passwordInput" placeholder="Digite a senha">
+        <button id="submitPassword">Enviar</button>
+    </div>
+    
+    <div id="message">=4B7Flpb-ur0</div>
+
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const submitPasswordButton = document.getElementById('submitPassword');
+
+        const correctPassword = [
+            '\u0052', '\u0069', '\u0074', '\u0075', '\u0061', '\u006C'
+        ];
+
+        submitPasswordButton.addEventListener('click', () => {
+            const password = passwordInput.value;
+            const decodedPassword = correctPassword.join('');
+            if (password === decodedPassword) {
+                window.location.href = "outra_pagina.html";
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // As mensagens ocultas sempre estão no fim
+    </script>
+</body>
+</html>
