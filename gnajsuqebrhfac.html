@@ -20,6 +20,8 @@
         }
         #passwordContainer {
             margin-top: 30px;
+            position: absolute; 
+            left: 42%;
         }
         #passwordInput {
             padding: 10px;
@@ -38,21 +40,37 @@
         <button id="submitPassword">Enviar</button>
     </div>
     
-    <div id="message">=4B7Flpb-ur0</div>
+    <div id="message"></div>
 
     <script>
         const passwordInput = document.getElementById('passwordInput');
         const submitPasswordButton = document.getElementById('submitPassword');
+        const messageElement = document.getElementById('message');
 
         const correctPassword = [
             '\u0052', '\u0069', '\u0074', '\u0075', '\u0061', '\u006C'
         ];
 
+        const hiddenMessage = [
+            '\u003D', '\u0034', '\u0042', '\u0037', '\u0046', '\u006C', '\u0070', '\u0062', 
+            '\u002D', '\u0075', '\u0072', '\u0030'
+        ];
+
+        const encodedPage = [
+            '\u0068', '\u0066', '\u0062', '\u006E', '\u006B', '\u0064', '\u006A', '\u0073', 
+            '\u006C', '\u0062', '\u0066', '\u0067', '\u006C', '\u006B', '\u0067', '\u0068', 
+            '\u0073', '\u0064', '\u006F', '\u0066', '\u0079', '\u002E', '\u0068', '\u0074', 
+            '\u006D', '\u006C'
+        ];
+
+        messageElement.textContent = hiddenMessage.join('');
+
         submitPasswordButton.addEventListener('click', () => {
             const password = passwordInput.value;
             const decodedPassword = correctPassword.join('');
             if (password === decodedPassword) {
-                window.location.href = "outra_pagina.html";
+                const decodedURL = encodedPage.join('');
+                window.location.href = decodedURL;
             } else {
                 alert("Senha incorreta. Tente novamente.");
             }

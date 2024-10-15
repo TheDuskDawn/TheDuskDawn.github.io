@@ -96,15 +96,29 @@
         const timerInterval = setInterval(updateTimer, 1000);
         updateTimer();
 
-        submitPasswordButton.addEventListener('click', () => {
-            const password = passwordInput.value;
-            const decodedPassword = correctPassword.join('');
-            if (password === decodedPassword) {
-                window.location.href = "ehdsfoifghbshlçjgdbs.html";
-            } else {
-                alert("Senha incorreta. Tente novamente.");
-            }
-        });
+       submitPasswordButton.addEventListener('click', () => {
+    const password = passwordInput.value;
+    const decodedPassword = correctPassword.join('');
+    if (password === decodedPassword) {
+        decodeAndRedirect();
+    } else {
+        alert("Senha incorreta. Tente novamente.");
+    }
+});
+
+function decodeAndRedirect() {
+    const encodedPage = [
+        '\u0065', '\u0068', '\u0064', '\u0073', '\u0066', '\u006F', '\u0069', '\u0066', '\u0067', 
+        '\u0068', '\u0062', '\u0073', '\u0068', '\u006C', '\u00E7', '\u006A', '\u0067', 
+        '\u0064', '\u0062', '\u0073', '\u002E', '\u0068', '\u0074', '\u006D', '\u006C'
+    ];
+
+    const decodedURL = encodedPage.join('');
+    window.location.href = decodedURL;
+}
+
+          
+
   
 
 
